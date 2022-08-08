@@ -7,7 +7,7 @@ def updateWordFreqData(sentence, freqDict, sentenceNo):
 
         value.append(sentenceNo)
         freqDict[word.lower()] = value
-        
+         
 def main():
     freqDict = {}
 
@@ -36,8 +36,17 @@ def main():
         
     updateWordFreqData(sentence, freqDict, 1)
     
+    
+    # Print Pretty Output 
+    outIndex = 0
     for word in sorted(freqDict.keys()):
-        print(word,"\t{",len(freqDict[word]),":",freqDict[word],"}")
-
+        outIndex +=1
+        if len(word) > 12 and len(word) <= 18:
+            print(outIndex, "\t", word, "{",len(freqDict[word]),":",freqDict[word],"}")     
+        elif len(word) > 6 and len(word) <= 12:
+            print(outIndex, "\t", word, "\t{",len(freqDict[word]),":",freqDict[word],"}")
+        else:
+            print(outIndex, "\t", word, "\t\t{",len(freqDict[word]),":",freqDict[word],"}")
+            
 if __name__=="__main__":
     main()
