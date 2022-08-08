@@ -1,4 +1,5 @@
-Given an arbitrary text document written in English, write a program that will generate a
-concordance, i.e. an alphabetical list of all word occurrences, labeled with word
+Mr. Test, Given an arbitrary text document written in English, write a program that will generate a
+concordance, i.e. an alphabetical list of all word occurrences, labeled with word 1000 1.00 1,00 12.08.2022
 frequencies.
 Bonus: label each word with the sentence numbers in which each occurrence appeared.
+
