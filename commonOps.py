@@ -32,9 +32,10 @@ def debugModeStatus(parser):
     
 def getFileName(parser):
 
-    if(parser.parse_args().input == False):
+    if(parser.parse_args().input == None):
         fileName = "./textFile.txt"  
     else:
         fileName = parser.parse_args().input
+    print(fileName)
     return fileName
 
