@@ -1,10 +1,11 @@
-from commonData import *
+import commonData
 
 def extractSentencesFromText(sentencesList, text):
     tmpSentencesList = []
 
     basicSentenceExtractor(tmpSentencesList, text)
     extractionErrorChecker (sentencesList, tmpSentencesList)
+    
     
 def prettyFreqDictPrint(freqDict):
     outIndex = 0
@@ -51,11 +52,11 @@ def extractionErrorChecker(sentences, tmpSentencesList):
         if faultyDividedSentenceFlag == True:
             sentences[-1] = sentences[-1] + " " + tmpSentence
             faultyDividedSentenceFlag = False 
-            for specialWord in specialWordsList:
+            for specialWord in commonData.specialWordsList:
                 if (specialWord in tmpWordList[-1]):
                     faultyDividedSentenceFlag = True   
         else:
-            for specialWord in specialWordsList:
+            for specialWord in commonData.specialWordsList:
                 if (specialWord in tmpWordList[-1]):
                     faultyDividedSentenceFlag = True   
             sentences.append(tmpSentence)
